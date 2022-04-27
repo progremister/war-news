@@ -1,0 +1,405 @@
+.wrapper {
+	display: flex;
+    flex-direction: row;
+    font: 1.1rem Verdana;
+    margin-top: 7rem;
+
+    & a{
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: none;
+        }
+
+		@media (max-width: $news-width-6) {
+			font-size: 0.5em;
+		}
+
+    }
+
+    & .box {
+        background-color: $news-box;
+		padding: .5rem;
+    	margin-bottom: .5rem;
+
+		@media (max-width: $news-width-1) {
+			h2 {
+				font-size: 1.2rem;
+			}
+		}
+
+		@media (max-width: $news-width-4) {
+			h2 {
+				font-size: 1rem;
+			}
+		}
+
+    }
+
+	& .title {
+		color: $black;
+		font-size: 1.3em;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+    & h2{
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    & img {
+        border: 0;
+    }
+    
+    & .break {
+        font-size: 0;
+		width: 0;
+		height: 0;
+		clear: both;
+    }
+
+    & .alignleft {
+        float: left;
+		margin: .4rem 1rem .5rem 0;
+    }
+
+    & .alignright {
+        float: right;
+		margin: .4rem 0 .5rem 1rem;
+    }
+
+    & .aligncenter {
+        text-align: center;
+    }
+
+    & .hidden {
+        display: none;
+    }
+}
+
+/** BEGIN left sidebar **/
+#lsidebar {
+	width: 20%;
+    float: left;
+    margin: 0 .5rem 1rem 0;
+    padding: .5rem;
+    padding-left: 0;
+
+	& .box {
+		background: $white;
+		border-width: .5rem;
+    	border-style: solid;
+		border-color: $news-box;
+	
+		& h2 {
+			text-align: center;
+			font-weight: 700;
+			padding: .6rem 0 1rem;
+			font-size: inherit;
+		}
+
+		& ul {
+			list-style-type: none;
+			padding: .2rem .2rem 1rem;
+		
+			& li {
+				text-align: center;
+				font-weight: 500;
+				border-bottom: 1px solid #DDDDDD;
+				padding: .5rem 0;
+			
+                & a {
+                    color: #808080;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+/** END left sidebar **/
+
+/** BEGIN content **/
+#content {
+	width: 55%;
+	float: left;
+	margin: .5rem 0;
+
+	@media (max-width: $news-width-3) {
+		width: 54%;
+	}
+
+	& h1 {
+		text-transform: uppercase;
+		color: $black;
+		padding: 2rem 0 0;
+		font-weight: 700;
+		font-size: 1.4em;
+		margin-bottom: 3rem;
+	}
+
+	& h2 {
+		font-size: inherit;
+	}
+
+    & .box {
+		background: $white;
+		border-width: .5rem;
+    	border-style: solid;
+		border-color: $news-box;
+
+		& .news {
+			height: 100vh;
+			overflow-y: scroll;
+			padding-bottom: 0.5rem;
+		}
+	
+		& .buffer {
+			background: $white  repeat-x 0 0;
+			border-width: 0 1px;
+			border-style: solid;
+			border-color: $news-white;
+			padding: 1.5rem;
+		}
+    }
+
+	& .homelist {
+		list-style-type: none;
+		background-color: $white;
+		padding: .3rem 1.5rem 1.5rem;
+    }
+	
+	& li {
+		clear: both;
+		padding: 3rem 0;
+		border-top: 1px solid $gray;
+		float: center;
+		margin-right: .5rem;
+		width: 100%;
+		height: auto;
+
+		& .post__date {
+			font-weight: 700;
+		}
+
+		& img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 1rem;
+		}
+
+		@media (max-width: $news-width-0) {
+			margin-bottom: 1rem;
+
+			& .post__date {
+				padding-left: 0;
+			}
+		}
+
+		& .title {
+			color: $black;
+			font-size: 1.2em;
+			font-weight: bold;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		& p {
+			line-height: 1.3em;
+    		margin: .7rem 0 .6rem;
+		}
+	}	
+
+	& .postnav {
+		background-color: $white;
+		padding: .5rem 1rem 1rem;
+		font-weight: bold;
+
+        & a {
+                text-decoration: none;
+        }
+    }
+
+	& .content {
+		padding: 1rem;
+
+        & p {
+			line-height: 1.4em;
+			font-size: 1.6rem;
+			margin: 0 0 1rem 1rem;
+            }
+
+		& ul, & ol {
+			margin-bottom: 1rem;
+		}
+
+        & ul {
+            list-style: disc inside  none;
+        }
+
+        & ol {
+            list-style: decimal inside none;
+        }
+
+		& li {
+			line-height: 1.4em;
+			padding: .2rem 0;
+		}
+
+		& img {
+			width: 100%;
+			height: 30rem;
+			margin: 1rem 0 2rem;
+		}
+
+		& blockqoute {
+			padding: 1rem 1rem .5rem;
+			background-color: #eeeeee;
+			border-width: 1px 0;
+			border-style: solid;
+			border-color: #e0e0e0;
+			margin-bottom: 1rem;
+		}
+
+		& h3, h4, h5, h6 {
+			font-size: 1.4em;
+			margin-bottom: .5rem;
+		}
+    }
+
+	& h3 {
+		text-transform: uppercase;
+		color: $black;
+		padding: 2rem 0 0 1rem;
+		margin-bottom: .4rem;
+		font-weight: 700;
+		font-size: 1.4em;
+	}
+
+	& .featured {
+		padding: .5rem;
+	}
+}
+
+/** END content **/
+
+/** BEGIN right sidebar **/
+#rsidebar {
+	width: 24%;
+    float: right;
+    padding: .5rem;
+
+	& .box {
+	
+		background: $white;
+		border-width: .5rem;
+    	border-style: solid;
+		border-color: $news-box;
+		& .buffer {
+			background: $white repeat-x 0 0;
+			border-width: 0 1px;
+			border-style: solid;
+			border-color: $news-white;
+			padding-bottom: .3rem;
+		}
+
+		& h2 {
+			text-align: center;
+			font-weight: 700;
+			font-size: inherit;
+			padding: .6rem .7rem 1rem;	
+		}
+
+		& ul {
+			list-style-type: none;
+		
+			& li {
+				border-bottom: 1px solid #DDDDDD;
+				padding: 5px;
+				font-size: 1.2em;
+			
+                & a {
+                    color: #808080;
+					font-weight: 500;
+					text-decoration: none;
+					font-size: 1.6rem;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+		& .tags {
+			padding: 1rem;
+		}
+    }
+
+	@media (max-width: $news-width-4) {
+		& li a {
+			line-height: 1;
+		}
+	}
+}
+/** END right sidebar **/
+
+@media (max-width: $news-width-1) {
+    
+    #lsidebar .box ul li a,
+    #rsidebar .box ul li a
+    {
+        font-size: .7em;
+    }
+
+	#lsidebar h2,
+	#content h2,
+	#rsidebar h2 {
+		font-size: .8em;
+	}
+
+}
+
+@media (max-width: $news-width-2) {
+
+    #lsidebar .box ul li a,
+    #rsidebar .box ul li a
+    {
+        font-size: .5em;
+    }
+
+	#lsidebar h2,
+	#content h2,
+	#rsidebar h2 {
+		font-size: .6em;
+	}
+}
+
+@media (max-width: $news-width-5) {
+
+    #lsidebar {
+        float: right;  
+        width: 29%;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    #content {
+        width: 70%;
+        height: 100vh;
+    }
+
+    #rsidebar {
+        width: 29%;
+    }
+}

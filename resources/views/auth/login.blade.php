@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container flex">
+    {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -68,6 +68,32 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+      <!-- Form Module-->
+      <div class="module form-module">
+        {{-- <div class="toggle"><i class="fa-pencil"></i>
+            <div class="tooltip">Click Me</div>
+          </div> --}}
+        <div class="form">
+          <h2>{{ __('Login') }}</h2>
+          <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">    
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror       
+            <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Password">
+            @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+            <button type="submit">{{ __('Login') }}</button>
+          </form>
+        </div>
+        <div class="cta"><a href="{{ route('password.request') }}">Forgot your password?</a></div>
+      </div>
 </div>
 @endsection

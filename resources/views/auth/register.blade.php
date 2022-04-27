@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container flex">
+    {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -72,6 +72,34 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    <div class="module form-module">
+        <div class="form">
+          <h2>{{ __('Register') }}</h2>
+          <form method="POST" action="{{ route('register') }}">
+            @csrf
+            <input id="username" class="@error('name') is-invalid @enderror" type="text" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Username">
+            @error('username')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+            <input id="email" class="@error('email') is-invalid @enderror" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">           
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+            <input id="password" class="@error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="Password">
+            @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
+            <button type="submit">{{ __('Register') }}</button>
+          </form>
+        </div>
+      </div>
 </div>
 @endsection

@@ -1,0 +1,117 @@
+.charity {
+    margin: 8.4rem 0 0 1.5rem;
+
+    @media (max-width: $laptop) {
+        margin: 8rem 0;
+    }
+
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 109rem;
+        margin: 5rem;
+    }
+
+    &__photo,
+    &__content {
+        width: 50%;
+
+        @media (max-width: $laptop) {
+            width: 100%;
+        }
+    }
+
+    &__photo {
+        position: relative;
+        overflow: hidden;
+        width: 50rem;
+        height: 32rem;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            min-height: 100%;
+
+
+            @media (max-width: $mobile){
+                height: 100%;
+            }
+        }
+
+        @media (max-width: $laptop) {
+            order: 1;
+            width: 100%;
+
+            &:before {
+                width: 100%;
+                left: 0;
+            }
+
+            img {
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__content {
+        padding-left: 2.5rem;
+
+        &--inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: $laptop) {
+            order: 2;
+            margin-top: 2rem;
+            padding-left: 0;
+            text-align: center;
+            max-width: 60rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        color: $black;
+        font-weight: 700;
+        text-transform: uppercase;
+    
+
+        @media (max-width: $laptop) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: $tablet){
+            font-size: 2rem;
+        }
+    }
+
+    &__text {
+        margin: 1.5rem 0 2.5rem;
+        font-size: 1.6rem;
+        line-height: 1;
+        color: $black;
+        font-weight: 300;
+    }
+
+    &__btn{
+        display: block;
+        text-transform: uppercase;
+        width: 45%;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        color: $black;
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}

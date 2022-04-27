@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container flex">
+    {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
@@ -41,6 +41,26 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div> --}}
+    <div class="module form-module">
+        <div class="form">
+          <h2>{{ __('Reset Password') }}</h2>
+          @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+          <form method="POST" action="{{ route('password.email') }}">
+            @csrf
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email"> 
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror          
+            <button type="submit">{{ __('Send Password Reset Link') }}</button>
+          </form>
         </div>
     </div>
 </div>

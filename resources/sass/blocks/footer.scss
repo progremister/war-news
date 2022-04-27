@@ -1,0 +1,110 @@
+.footer {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    z-index: 100;
+    background-color: $black;
+    
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__credits {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $laptop) {
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__copyright {
+        padding-right: .8rem;
+        margin-right: 1rem;
+
+        font-size: 1.6rem;
+        color: $white;
+
+        border-right: 1px solid fade($white, 35%);
+
+        @media (max-width: $tablet) {
+            margin-right: 0;
+            margin-bottom: 1rem;
+            border-right: 0;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-right: 1.2rem;
+            text-decoration: none;
+
+            transition: transform .2s linear;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+            @media (max-width: $laptop) {
+                margin: 0 .5rem;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+        @media (max-width: $laptop) {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__nav-link {
+        margin-left: 1.5rem;
+        padding: .5rem 1rem;
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+
+
+        &--btn {
+            padding: .5rem 1.4rem;
+
+            border-radius: 2rem;
+            border: 1px solid $white;
+            line-height: 1.1;
+
+            &:hover {
+                text-decoration: none;
+                background-color: $white;
+                border-color: $white;
+                color: $black;
+            }
+        }
+
+        @media (max-width: $laptop) {
+            margin: 0 .5rem .5rem;
+        }
+    }
+}

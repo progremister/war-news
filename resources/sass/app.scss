@@ -1,8 +1,45 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import "variables";
 
-// Variables
-@import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $bg;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $black;
+}
+
+*,
+*:before,
+*:after{
+   box-sizing: border-box 
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+@import "blocks/header";
+@import "blocks/navigation";
+@import "blocks/container";
+@import "blocks/buttons"; 
+@import "blocks/charity.scss";
+@import "blocks/modal-donate";
+@import "blocks/pagination";
+@import "blocks/shelters";
+@import "blocks/news";
+@import "blocks/footer";
+@import "blocks/authorization";
+
+

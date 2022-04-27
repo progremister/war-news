@@ -1,0 +1,21 @@
+.btn--white {
+    border: 2px solid $white;
+    border-radius: 2rem;
+    transition: background-color .2s linear, color .2s linear;
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.btn--black {
+    border: 2px solid $black;
+    border-radius: 2rem;
+    transition: background-color .2s linear, color .2s linear;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
