@@ -275,6 +275,7 @@ a {
 .sl-nav {
   display: flex;
   justify-content: center;
+  padding: 1rem;
   align-items: center;
   width: 7rem;
   text-align: center;
@@ -1170,4 +1171,17 @@ a {
   text-decoration: underline;
   color: #484848;
   text-decoration: none;
+}
+
+.table a {
+  text-decoration: none;
+  color: #151515;
+}
+.table a:hover {
+  color: #151515;
+  cursor: pointer;
+}
+
+.project-actions form {
+  display: inline-block;
 }

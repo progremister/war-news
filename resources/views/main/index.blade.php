@@ -56,6 +56,15 @@
             </div>
         </div>
 
+        <div class="accordion__item" data-collapse="#kryvyi_rih">
+            <div class="accordion__header">
+                <div class="accordion__title">Kryvyi Rih</div>
+            </div>
+            <div class="accordion__content" id="kryvyi_rih">
+                <iframe src="https://www.google.com/maps/d/embed?mid=16h3FUytKBRktZ7y_FMwLC-jdfg4oeXsS&ehbc=2E312F"></iframe> 
+            </div>
+        </div>
+
         <div class="accordion__item" data-collapse="#poltava">
             <div class="accordion__header">
                 <div class="accordion__title">Poltava</div>

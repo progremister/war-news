@@ -25,7 +25,7 @@ class NewsController extends Controller
         // }
         // else {
             if($request){
-                $posts = Post::orderBy('published_date', 'desc')->filter($request)->paginate(2);
+                $posts = Post::orderBy('created_at', 'desc')->filter($request)->paginate(2);
             }
 
         return view('main.news', [
@@ -56,7 +56,7 @@ class NewsController extends Controller
     {
         $posts = Post::get();
         if($categoryId){
-            $posts = Post::orderBy('published_date', 'desc')
+            $posts = Post::orderBy('created_at', 'desc')
             ->where('category_id', '=', $categoryId)->where('category_id', '<>', null)->paginate(2);
         }
         return $posts;
@@ -67,29 +67,13 @@ class NewsController extends Controller
         $statement = Post::where('url_key', '=', $urlKey)->first();
 
         return $statement;
-    }
-
-    function fetch_data(Request $request){
-        dd($request);
-        if($request->ajax()){
-            // $posts = DB::table('posts')->orderBy('published_date', 'desc')->paginate(2);
-            // // ->where('title', 'LIKE', "%{$s}%")
-            // // ->orWhere('content', 'LIKE', "%{$s}%")
-            // // ->orWhere('published_date', 'LIKE', "%{$s}%")
-            // return view('partials.pagination_data', compact('posts')->render());
-            return "ajax call";
-        }
-
-        else return "Not a ajax call";
-    }
-
-     
+    }     
 
       public function getLatest(int $limit){
         $posts = new Post();
         //$statement =  $this -> connection -> prepare('SELECT * FROM posts ORDER BY published_date DESC LIMIT ' . $limit );
         $statement = $posts
-        ->orderBy('published_date', 'desc')
+        ->orderBy('created_at', 'desc')
         ->limit($limit)
         -> get();
 

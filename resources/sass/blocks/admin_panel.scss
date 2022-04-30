@@ -1,0 +1,11 @@
+.table {
+    a {
+        text-decoration: none;
+        color: $black;
+
+        &:hover{
+            color: $black;
+            cursor: pointer;
+        }
+    }
+}
