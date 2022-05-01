@@ -15,6 +15,6 @@ class PostFilter extends QueryFilter {
 
     public function date($date_string){
         $date = explode('.', $date_string);
-        return  $this->builder->whereMonth('published_date','=', $date[0])->whereYear('published_date','=', $date[1]);
+        return  $this->builder->whereMonth('created_at','=', $date[0])->whereYear('created_at','=', $date[1]);
     }
 }

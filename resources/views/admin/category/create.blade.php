@@ -35,7 +35,7 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputTitle">Title</label>
-                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Enter the title of category" required>
+                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Enter the title of a category" required>
                     </div>
                    
                   <!-- /.card-body -->

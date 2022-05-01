@@ -1182,6 +1182,7 @@ a {
   cursor: pointer;
 }
 
-.project-actions form {
-  display: inline-block;
+.img-uploaded {
+  display: block;
+  width: 30rem;
 }

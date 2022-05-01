@@ -17,4 +17,8 @@ class Post extends Model
     public function scopeFilter(Builder $builder, QueryFilter $filter) {
         return $filter->apply($builder);
     }
+
+    public function category(){
+        return $this->belongsTo('App\Models\Category', 'category_id');
+    }
 }

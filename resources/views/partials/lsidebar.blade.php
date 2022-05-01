@@ -22,6 +22,8 @@
         <div class="box">
             <h2>Dates</h2>
             <ul>
+                <li><a href="/news?date=05.2022">May 2022</a></li>
+                <li><a href="/news?date=04.2022">April 2022</a></li>
                 <li><a href="/news?date=03.2022">March 2022</a></li>
                 <li><a href="/news?date=02.2022">February 2022</a></li>
                 <li><a href="/news?date=01.2022">January 2022</a></li>

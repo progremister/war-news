@@ -23,8 +23,8 @@
   <link rel="stylesheet" href="/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
+  <link href="/admin/dist/css/colorbox.css" rel="stylesheet">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -89,12 +89,12 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link">
+                        <a href="{{ route('post.index') }}" class="nav-link">
                         <p>All posts</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link">
+                        <a href="{{ route('post.create') }}" class="nav-link">
                         <p>Add post</p>
                         </a>
                     </li>
@@ -131,7 +131,7 @@
               </a>
               <ul class="nav nav-treeview">
                   <li class="nav-item">
-                      <a href="./index.html" class="nav-link">
+                      <a href="{{ route('user.index')}}" class="nav-link">
                       <p>All users</p>
                       </a>
                   </li>
@@ -199,6 +199,9 @@
 <script src="/admin/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/admin/dist/js/pages/dashboard.js"></script>
+<script type="text/javascript" src="/admin/dist/js/jquery.colorbox-min.js"></script>
+<script src="https://cdn.tiny.cloud/1/bi7zb36hthig7mcfe83ubem7rlwvwn13vnlztf1bbylqsv97/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script type="text/javascript" src="/packages/barryvdh/elfinder/js/standalonepopup.js"></script>
 <script src="/admin/admin.js"></script>
 
 </body>

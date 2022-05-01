@@ -9,7 +9,7 @@
                 </a> 
                 <a href="/{{ $post->url_key }}" class="title">{{ $post->title}}</a>
                 <p>{{ $post->description}}</p>
-                <h2 class="post__date" >{{ $post->published_date}}</h2>
+                <h2 class="post__date" >{{ $post->created_at}}</h2>
             </li>
         @endforeach
     </div>
