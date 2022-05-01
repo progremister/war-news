@@ -10,7 +10,7 @@ class PostFilter extends QueryFilter {
     }
 
     public function search($search_string) {
-        return $this->builder->where('title', 'LIKE', "%{$search_string}%")->orWhere('content', 'LIKE', "%{$search_string}%")->orWhere('published_date', 'LIKE', "%{$search_string}%");
+        return $this->builder->where('title', 'LIKE', "%{$search_string}%")->orWhere('content', 'LIKE', "%{$search_string}%")->orWhere('created_at', 'LIKE', "%{$search_string}%");
     }
 
     public function date($date_string){
