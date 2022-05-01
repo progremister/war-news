@@ -1,0 +1,7 @@
+{
+    "The :attribute must contain at least one letter.": " :attribute має мати щонайменш  1 літеру.",
+    "The :attribute must contain at least one number.": " :attribute має мати щонайменш  1 цифру.",
+    "The :attribute must contain at least one symbol.": " :attribute має мати щонайменш  1 символ.",
+    "The :attribute must contain at least one uppercase and one lowercase letter.": " :attribute має мати щонайменш  1 велику і малу літеру.",
+    "The given :attribute has appeared in a data leak. Please choose a different :attribute.": " Даний :attribute з'явився в результаті витоку даних. Будь ласка, виберіть інший :attribute."
+}

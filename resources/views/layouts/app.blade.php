@@ -25,10 +25,10 @@
                 {{ config('app.name', 'Laravel') }}
             </a>
             <nav class="nav" id="nav">
-                <a class="nav__link" href="/register">Sign Up</a>
-                <a class="nav__link" href="/login">Sign In</a>
+                <a class="nav__link" href="/register">Реєстрація</a>
+                <a class="nav__link" href="/login">Вхід</a>
                 
-                <a class="nav__link" href="/">Back</a>
+                <a class="nav__link" href="/">Назад</a>
 
             
                 <!-- Left Side Of Navbar -->

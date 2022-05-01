@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Main;
 
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use App\Models\Charity;
 
@@ -23,5 +24,10 @@ class MainController extends Controller
         return view('main.charity', [
             'donates' => Charity::get()
         ]);
+    }
+
+    public function changeLocale($locale){
+        $currentLocale = App::getLocale();
+        dd($currentLocale);
     }
 }

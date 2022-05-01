@@ -24,12 +24,16 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Route::controller(HomeController::class)->group(function(){
-    Route::get("/adminka", "index")->name("homeAdmin");
+    Route::get('/adminka', 'index')->name("homeAdmin");
 });
 Route::controller(MainController::class)->group(function () {
     Route::get('/','index')->name('shelters');
     Route::get('/charity', 'charity')->name('charity');
+    Route::get('locale/{locale}', 'changeLocale') -> name('locale');
+
 });
 
 

@@ -25,23 +25,6 @@ $(function() {
         } 
     } 
  
-    // /* Smooth scroll */ 
-    // $("[data-scroll]").on("click", function(event) { 
-    //     event.preventDefault(); 
- 
-    //     var $this = $(this), 
-    //         blockId = $this.data('scroll'), 
-    //         blockOffset = $(blockId).offset().top; 
- 
-    //     $("#nav a").removeClass("active"); 
-    //     $this.addClass("active"); 
- 
-    //     $("html, body").animate({ 
-    //         scrollTop:  blockOffset 
-    //     }, 500); 
-    // }); 
- 
- 
     /** 
      *  Menu navigation toggle 
      * ========================= */ 
@@ -57,19 +40,6 @@ $(function() {
     /**
      * Form toggle
      */
-
-//     // Toggle Function
-// $('.toggle').click(function(){
-//     // Switches the Icon
-//     $(this).children('i').toggleClass('fa-pencil');
-//     // Switches the forms  
-//     $('.form').animate({
-//       height: "toggle",
-//       'padding-top': 'toggle',
-//       'padding-bottom': 'toggle',
-//       opacity: "toggle"
-//     }, "slow");
-//   });
  
     /** 
      *  Modals 
@@ -131,6 +101,30 @@ $(function() {
         event.stopPropagation(); 
     }); 
  
+
+    /**
+     * Language Dropdown
+     * $(document).ready(function () {
+
+                // Show dropdown
+                $('.selected').click(function () {
+                    $('.custom-sel').addClass('show-sel');
+                    $('.custom-sel a').removeClass('hidden');
+                });
+
+                // Hide dropdown when not focused
+                $('.custom-sel').focusout(function () {
+                    $('.custom-sel').removeClass('show-sel');
+                    $('.custom-sel a:not(:first)').addClass('hidden');
+                }).blur(function () {
+                    $('.custom-sel').removeClass('show-sel');
+                    $('.custom-sel a:not(:first)').addClass('hidden');
+                });
+
+            });
+     */
+
+
     /** 
      * Accordion collapse 
      * =================== */ 
@@ -158,85 +152,4 @@ $(function() {
       $(".currency-selector").on("change", updateSymbol) 
        updateSymbol() 
 
-    
-    /**
-     * AJAX pagination
-     */
-
-
-    //  $.ajaxSetup({
-    //     headers: {
-    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //     }
-    // });
-    
-    //     $(document).on('click', '.pagination a', function(e){
-    //         e.preventDefault();
-    //         alert("click!");
-    //         console.log($('meta[name="csrf-token"]').attr('content'));
-    //          var page = $(this).attr('href').split('page=')[1];
-    //          console.log(page);
-    //          fetch_data(page);
-    //     })
-    
-    //     async function fetch_data(page){
-            
-    //         // $.ajax({
-    //         //     url: "/news/fetch_data?page="+page,
-    //         //     success: function(posts) {
-    //         //         console.log(posts);
-    //         //         $('#news_pagination').html(posts);
-    //         //     }
-    //         // })
-    //         let token = $('meta[name="csrf-token"]').attr('content');
-    //         let resp = await fetch( "/news/fetch_data?page="+page, {
-    //             method: "get",
-    //             headers: {"X-CSRF-TOKEN": token}
-    //     });
-    //         if(resp.ok===true)
-    //         {
-    //             const data = await resp.text();
-    //             console.log(data);
-    //         }
-    //         else
-    //         console.log(resp.statusText);
-    //     }
-    
-    
-    /**
-     * AJAX search
-     */
-
-    //  $.ajaxSetup({
-    //     headers: {
-    //       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //     }
-    //   });
-
-    //  $("#search_btn").on("click", function(event) { 
-    //     event.preventDefault(); 
-    //     $inputSearch = $("#search_bar").val();
-    //     console.log("Text: " + $inputSearch);
-    //     if($inputSearch != "") {
-    //         $.ajax({
-    //         method: "post",
-    //         url: "news",
-    //         data: JSON.stringify({
-    //                 inputSearch: $inputSearch
-    //             }),
-    //             _token: '{{csrf_token()}}'
-    //         ,
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Contemt-Type': 'application/json'
-    //         },
-    //         success: function(data){
-    //             let searchResultAjax = "";
-    //             data = JSON.parse(data);
-    //             console.log(data);
-    //             $()
-    //         }
-    //     })
-    //     }
-    // })
 });

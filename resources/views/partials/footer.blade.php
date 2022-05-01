@@ -13,9 +13,9 @@
         </div>
 
         <nav class="footer__nav">
-            <a class="footer__nav-link" href="{{ url('/') }}">Shelters</a>
-            <a class="footer__nav-link" href="{{ route('news') }}">News</a>
-            <a class="footer__nav-link  footer__nav-link--btn" href="{{ route('charity') }}">Charity</a>
+            <a class="footer__nav-link" href="{{ url('/') }}">Укриття</a>
+            <a class="footer__nav-link" href="{{ route('news') }}">Новини</a>
+            <a class="footer__nav-link  footer__nav-link--btn" href="{{ route('charity') }}">Допомогти</a>
         </nav>
     </div>
 </footer>

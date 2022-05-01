@@ -9,27 +9,20 @@
                 <input id="search_bar" type="search" placeholder="Search..." autofocus required id="search"  name="search" />
                 <button type="submit" id="search_btn">Go</button>    
               </form>
-            <a class="nav__link" href="{{ url('/') }}">Shelters</a>
-            <a class="nav__link" href="{{ route('news') }}">News</a>
+            <a class="nav__link" href="{{ url('/') }}">Укриття</a>
+            <a class="nav__link" href="{{ route('news') }}">Новини</a>
             
-            <a class="nav-link sl-nav" href="#">
+            {{-- <a class="nav-link sl-nav" href="#">
                 <img src="{{ asset("images/icons/globe.svg")}}" alt="">
                 <ul>
-                    <li><b>en</b>
+                    <li><b>{{ App::getLocale() }}</b>
                         <ul>
-                            <li><i class="sl-flag flag-ua">
-                                    <div id="ukrainian"></div>
-                                </i> <span class="active">Українська</span></li>
-                            <li><i class="sl-flag flag-usa">
-                                    <div id="english"></div>
-                                </i> <span>English</span></li>
-                            <li><i class="sl-flag flag-rus">
-                                    <div id="russian"></div>
-                                </i> <span>Русский</span></li>
+                            <li><span class="active">Українська</span></li>
+                            <li><span>English</span></li>
                         </ul>
                     </li>
                 </ul>
-            </a>
+            </a> --}}
 
             <a class="nav__link social__link" href="">
                 <img src="{{ asset("images/icons/telegram-white.svg")}}" alt="">
@@ -41,13 +34,13 @@
                         <ul>
                             <li><i class="sl-flag flag-ua">
                                     <div id="edit_profile"></div>
-                                </i> <span class="active">Edit profile</span></li>
+                                </i> <span class="active"> Профіль</span></li>
                             <li><i class="sl-flag flag-rus">
                                     <div id="logout"></div>
                                 </i><span class="" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Вийти') }}
                                 </span></li>
                         </ul>
                     </li>
@@ -77,11 +70,11 @@
                 @csrf
             </form>
             @else
-            Log In 
+            Увійти 
             </a>
             @endif
             
-            <a class="nav__link  nav__link--btn" href="{{ route('charity') }}">Charity</a>
+            <a class="nav__link  nav__link--btn" href="{{ route('charity') }}">Допомогти</a>
         </nav>
 
         <button class="nav-toggle" id="nav_toggle" type="button">

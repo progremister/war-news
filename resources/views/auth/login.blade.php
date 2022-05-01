@@ -75,7 +75,7 @@
             <div class="tooltip">Click Me</div>
           </div> --}}
         <div class="form">
-          <h2>{{ __('Login') }}</h2>
+          <h2>{{ __('Вхід') }}</h2>
           <form method="POST" action="{{ route('login') }}">
             @csrf
             <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">    
@@ -84,16 +84,16 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror       
-            <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Password">
+            <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Пароль">
             @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <button type="submit">{{ __('Login') }}</button>
+            <button type="submit">{{ __('Увійти') }}</button>
           </form>
         </div>
-        <div class="cta"><a href="{{ route('password.request') }}">Forgot your password?</a></div>
+        <div class="cta"><a href="{{ route('password.request') }}">Забули пароль?</a></div>
       </div>
 </div>
 @endsection

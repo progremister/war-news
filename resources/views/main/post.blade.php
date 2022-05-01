@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Post
+    Стаття
 @endsection
 
 @section('news-content')

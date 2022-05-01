@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('title')
-    Edit Category
+    Змінити категорію
 @endsection
 
 @section('admin_content')
@@ -35,14 +35,14 @@
                     @method('PUT')
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputTitle">Title</label>
-                      <input type="text" value="{{ $category->name }}" class="form-control" id="exampleInputTitle" name="title" placeholder="Enter the title of category" required>
+                      <label for="exampleInputTitle">Заголовок</label>
+                      <input type="text" value="{{ $category->name }}" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок категорії" required>
                     </div>
                    
                   <!-- /.card-body -->
   
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">Змінити</button>
                   </div>
                 </form>
               </div>

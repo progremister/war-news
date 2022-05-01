@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('title')
-    Add Category
+    Додати категорію
 @endsection
 
 @section('admin_content')
@@ -34,14 +34,14 @@
                     @csrf
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputTitle">Title</label>
-                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Enter the title of a category" required>
+                      <label for="exampleInputTitle">Заголовок</label>
+                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок категорії" required>
                     </div>
                    
                   <!-- /.card-body -->
   
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary">Додати</button>
                   </div>
                 </form>
               </div>

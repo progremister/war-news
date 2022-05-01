@@ -41,7 +41,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ route('shelters') }}" class="nav-link">Home</a>
+        <a href="{{ route('shelters') }}" class="nav-link">На головну</a>
       </li>
     </ul>
   </nav>
@@ -86,7 +86,7 @@
                 <a href="{{ route('homeAdmin') }}" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
-                    Main Panel
+                    Головна панель
                   </p>
                 </a>
               </li>
@@ -94,19 +94,19 @@
                 <a href="#" class="nav-link">
                 <i class="nav-icon far fa-newspaper"></i>
                 <p>
-                    News
+                    Новини
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href="{{ route('post.index') }}" class="nav-link">
-                        <p>All posts</p>
+                        <p>Усі пости</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('post.create') }}" class="nav-link">
-                        <p>Add post</p>
+                        <p>Додати пост</p>
                         </a>
                     </li>
                 </ul>
@@ -115,19 +115,19 @@
                 <a href="#" class="nav-link ">
                 <i class="nav-icon fas fa-align-left"></i>
                 <p>
-                    Categories
+                    Категорії
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href="{{ route('category.index') }}" class="nav-link">
-                        <p>All categories</p>
+                        <p>Усі категорії</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('category.create') }}" class="nav-link">
-                        <p>Add category</p>
+                        <p>Додати категорію</p>
                         </a>
                     </li>
                 </ul>
@@ -136,19 +136,19 @@
               <a href="#" class="nav-link ">
               <i class="nav-icon fas  fa-hand-holding-heart"></i>
               <p>
-                  Charity Items
+                  Благодійність
                   <i class="right fas fa-angle-left"></i>
               </p>
               </a>
               <ul class="nav nav-treeview">
                   <li class="nav-item">
                       <a href="{{ route('charity.index') }}" class="nav-link">
-                      <p>All charities</p>
+                      <p>Список потреб</p>
                       </a>
                   </li>
                   <li class="nav-item">
                       <a href="{{ route('charity.create') }}" class="nav-link">
-                      <p>Add charity item</p>
+                      <p>Додати потребу</p>
                       </a>
                   </li>
               </ul>

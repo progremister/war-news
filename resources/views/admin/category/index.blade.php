@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('title')
-    All Categories
+Усі категорії
 @endsection
 
 @section('admin_content')
@@ -28,7 +28,7 @@
     <div class="container-fluid">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Categories</h3>
+                  <h3 class="card-title">Кфтегорії</h3>
         
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -47,10 +47,10 @@
                                 <a href="?key=id" name="id">ID</a>
                               </th>
                               <th>
-                                  <a href="?key=name" name="name">Title</a>
+                                  <a href="?key=name" name="name">Заголовок</a>
                               </th>
                               <th>
-                                <a href="?key=created_at" name="created_at">Created</a>
+                                <a href="?key=created_at" name="created_at">Час створення</a>
                               </th>
                               <th style="width: 40%">
                               </th>
@@ -80,7 +80,7 @@
                                   <a class="btn btn-info btn-sm" href="{{ route('category.edit', $category->id) }}">
                                       <i class="fas fa-pencil-alt">
                                       </i>
-                                      Edit
+                                      Змінити
                                   </a>
                                   <form action="{{ route('category.destroy', $category->id) }}" method="POST" style="display: inline-block;">
                                     @csrf
@@ -88,7 +88,7 @@
                                         <button type="submit" class="btn btn-danger btn-sm delete-btn">
                                             <i class="fas fa-trash">
                                             </i>
-                                            Delete
+                                            Видалити
                                         </button>
                                   </form>
                               </td>

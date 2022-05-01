@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('title')
-    Edit Post
+    Змінити статтю
 @endsection
 
 @section('admin_content')
@@ -35,15 +35,15 @@
                     @method('PUT')
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputTitle">Title</label>
-                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Enter the title of a post" required value="{{ $post->title }}">
+                      <label for="exampleInputTitle">Заголовок</label>
+                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок статті" required value="{{ $post->title }}">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputUrlKey">Url Key</label>
-                      <input type="text" class="form-control" id="exampleInputUrlKey" name="url_key" placeholder="Enter the url key of a post" required value="{{ $post->url_key }}">
+                      <label for="exampleInputUrlKey">Url Ключ</label>
+                      <input type="text" class="form-control" id="exampleInputUrlKey" name="url_key" placeholder="Введіть url ключ статті" required value="{{ $post->url_key }}">
                     </div>
                     <div class="form-group">
-                      <label>Category</label>
+                      <label>Категорія</label>
                       <select class="form-control"  name="category_id">
                         @foreach ($categories as $category)
                         <option value="{{ $category->id }}"@if($category->id == $post->id) selected @endif>{{ $category->name }}</option>
@@ -51,8 +51,8 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputDescription">Description</label>
-                      <input type="text" class="form-control" id="exampleInputDescription" name="description" placeholder="Enter the description of a post" required value="{{ $post->description }}">
+                      <label for="exampleInputDescription">Опис</label>
+                      <input type="text" class="form-control" id="exampleInputDescription" name="description" placeholder="Введіть опис статті" required value="{{ $post->description }}">
                     </div>
                     <div class="form-group">
                       <textarea name="content" class="editor">{{ $post->content }}</textarea>
@@ -60,12 +60,12 @@
                     <div class="form-group">
                       <img src="{{ asset("$post->image_path") }}" alt="" class="img-uploaded" style="display: block; width: 30rem;">
                       <input class="form-control" type="text" id="feature_image" name="image_path" value="{{ $post->image_path }}">
-                      <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
+                      <a href="" class="popup_selector" data-inputid="feature_image">Виберіть зображення</a>
                     </div>
                   <!-- /.card-body -->
   
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">Змінити</button>
                   </div>
                 </form>
               </div>

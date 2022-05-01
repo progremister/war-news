@@ -13,11 +13,11 @@
                 <div class="form-header-group  header-large">
                     <div class="header-text httal htvam">
                     <h1 id="header_28" class="form-header">
-                        Donation Form
+                        Благодійна Форма
                     </h1>
                     <div class="anonimously">
                         <img src="{{ asset("images/charity/anonym.png") }}" alt="" height="60">
-                        <h2>Completely anonimously</h2>
+                        <h2>Повністю анонімно</h2>
                     </div>
                     </div>
                 </div>
@@ -58,15 +58,13 @@
                 </li> -->
                 <li class="form-line jf-required" data-type="control_paypalcomplete" id="id_37">
                 <label class="form-label form-label-top" id="label_37" for="input_37">
-                    Donation Amount
+                    Сума
                     <span class="form-required">
                     *
                     </span>
                 </label>
                 <div id="cid_37" class="form-input-wide jf-required">
-                    <input type="hidden" name="simple_fpc" data-payment_type="paypalcomplete" value="37" />
-                    <input type="hidden" name="payment_total_checksum" id="payment_total_checksum" />
-                    <span class="form-sub-label-container" style="vertical-align: top;">
+                    <span class="form-sub-label-container">
                     <div class="wrapper">
                         <form class="form-inline">
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
@@ -89,12 +87,12 @@
                         </div>
                         </form>
                     </div>
-                    <label class="form-sub-label" for="input_37_donation" style="min-height: 13px;"> Please enter your donation amount </label>
+                    <label class="form-sub-label" for="input_37_donation" style="min-height: 13px;"> Введіть суму пожертви </label>
                     </span>
                 </div>
                 </li>
                 <li class="form-line" id="id_38">
-                <label class="form-label form-label-top" id="label_38" for="input_38"> Payment Methods </label>
+                <label class="form-label form-label-top" id="label_38" for="input_38"> Методи оплати </label>
                 <div id="cid_38" class="form-input-wide">
                     <div class="payment-methods-area">
                     <div class="paypalcomplete-payment-wrapper">
@@ -105,13 +103,13 @@
                                 <div class="payment-method-container">
                                 <input type="radio" class="form-radio" name="payment-method" data-id="card-fields" id="card-fields-input" aria-describedby="label_38" />
                                 <label for="card-fields-input">
-                                    Debit or Credit Card
+                                    Debit або Credit Card
                                 </label>
                                 </div>
                                 <div class="payment-method-container">
                                 <input type="radio" class="form-radio" name="payment-method" data-id="btc-fields" id="btc-fields-input" aria-describedby="label_39" />
                                 <label for="btc-fields-input">
-                                    BTC Wallet
+                                    BTC гаманець
                                 </label>
                                 </div>
                             </div>
@@ -194,7 +192,7 @@
 
                 <li class="form-line jf-required" data-type="control_textarea" id="id_33">
                 <label class="form-label form-label-top form-label-auto" id="label_33" for="input_33">
-                    Comments
+                    Коментарі
                     <span class="form-required">
                     *
                     </span>
@@ -207,7 +205,7 @@
                 <div id="cid_14" class="form-input-wide">
                     <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
                     <button id="input_14" type="submit" class="form-submit-button form-submit-button-simple_black submit-button jf-form-buttons jsTest-submitField">
-                        SUBMIT
+                        Підтвердити
                     </button>
                     </div>
                 </div>

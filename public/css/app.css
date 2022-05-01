@@ -78,7 +78,7 @@ a {
 @media (max-width: 885px) {
   .nav {
     display: none;
-    width: 35%;
+    width: 40%;
     height: 115vh;
     position: absolute;
     top: 100%;
@@ -312,28 +312,17 @@ a {
   display: none;
 }
 .sl-nav li ul li {
-  position: relative;
   text-align: left;
   background: #fff;
   padding: 1.5rem 1.5rem;
-  padding-bottom: 0;
   z-index: 2;
   font-size: 1.5rem;
   color: #151515;
 }
-.sl-nav li ul li:last-of-type {
-  padding-bottom: 1.5rem;
-}
-.sl-nav li ul li span {
-  padding-left: 0.5rem;
-}
-.sl-nav li ul li span:hover, .sl-nav .sl-nav li ul li span.active {
-  color: #ccc;
-}
 .sl-nav li ul li a {
   padding-left: 0.5rem;
 }
-.sl-nav li ul li a:hover, .sl-nav .sl-nav li ul li a.active {
+.sl-nav li ul li a:hover, .sl-nav li ul li a.active {
   color: #ccc;
 }
 

@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('title')
-    All Users
+    Всі користувачі
 @endsection
 
 @section('admin_content')
@@ -28,7 +28,7 @@
     <div class="container-fluid">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Users</h3>
+                  <h3 class="card-title">Користувачі</h3>
         
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -47,13 +47,13 @@
                                 <a href="?key=id" name="id">ID</a>
                               </th>
                               <th>
-                                  <a href="?key=username" name="username">Username</a>
+                                  <a href="?key=username" name="username">Ім'я користувача</a>
                               </th>
                               <th>
                                 <a href="?key=email" name="email">Email</a>
                               </th>
                               <th>
-                                <a href="?key=created_at" name="registered">Registered</a>
+                                <a href="?key=created_at" name="registered">Час реєстрації</a>
                               </th>
                               <th style="width: 40%">
                               </th>
@@ -88,7 +88,7 @@
                                   <a class="btn btn-info btn-sm" href="{{ route('user.edit', $user->id) }}">
                                       <i class="fas fa-display-code">
                                       </i>
-                                      Make admin
+                                      Зробити адміном
                                   </a>
                                   <form action="{{ route('user.destroy', $user->id) }}" method="POST" style="display: inline-block;">
                                     @csrf
@@ -96,7 +96,7 @@
                                         <button type="submit" class="btn btn-danger btn-sm delete-btn">
                                             <i class="fas fa-trash">
                                             </i>
-                                            Delete
+                                            Видалити
                                         </button>
                                   </form>
                               </td>

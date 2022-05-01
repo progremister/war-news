@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('title')
-    Add Post
+    Додати статтю
 @endsection
 
 @section('admin_content')
@@ -34,15 +34,15 @@
                     @csrf
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputTitle">Title</label>
-                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Enter the title of a post" required>
+                      <label for="exampleInputTitle">Заголовок</label>
+                      <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок статті" required>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputUrlKey">Url Key</label>
-                      <input type="text" class="form-control" id="exampleInputUrlKey" name="url_key" placeholder="Enter the url key of a post" required>
+                      <label for="exampleInputUrlKey">Url Ключ</label>
+                      <input type="text" class="form-control" id="exampleInputUrlKey" name="url_key" placeholder="Введіть url ключ статті" required>
                     </div>
                     <div class="form-group">
-                      <label>Category</label>
+                      <label>Категорія</label>
                       <select class="form-control"  name="category_id">
                         @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -50,8 +50,8 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputDescription">Description</label>
-                      <input type="text" class="form-control" id="exampleInputDescription" name="description" placeholder="Enter the description of a post" required>
+                      <label for="exampleInputDescription">Опис</label>
+                      <input type="text" class="form-control" id="exampleInputDescription" name="description" placeholder="Введіть опис статті" required>
                     </div>
                     <div class="form-group">
                       <textarea name="content" class="editor"></textarea>
@@ -59,12 +59,12 @@
                     <div class="form-group">
                       <img src="" alt="" class="img-uploaded" style="display: block; width: 30rem;">
                       <input class="form-control" type="text" id="feature_image" name="image_path" value="" readonly>
-                      <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
+                      <a href="" class="popup_selector" data-inputid="feature_image">Виберіть зображення</a>
                     </div>
                   <!-- /.card-body -->
   
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary">Додати</button>
                   </div>
                 </form>
               </div>
