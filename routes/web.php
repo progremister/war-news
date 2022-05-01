@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\CharityController;
 use App\Http\Controllers\Admin\UserController;
 
 
@@ -47,7 +48,8 @@ Route::middleware('role:admin')->prefix('adminka')->group(function(){
 
     Route::resource('category', CategoryController::class);
     Route::resource('post', PostController::class);
+    Route::resource('charity', CharityController::class);
     Route::resource('user', UserController::class);
-    
+
 });
     
