@@ -7,20 +7,36 @@
 
 
     @media (max-width: $tablet) {
-            display: none;
-            width: 40%;
-            height: 115vh;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: $black;
-           
-           &.active{
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               justify-content: flex-start;
-           }
+        display: none;
+        width: 40%;
+        height: 115vh;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: $black;
+        
+        &.active{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        & .dropdown-language {
+            top: 3.3rem;
+            left: 19%;
+            width: 70%;
+
+            @media (max-width: $news-width-4) {
+                & {
+                    font-size: 1.2rem;
+                }
+
+                a {
+                    padding: .8rem;
+                }
+            }
+        }
     }
 }
 
@@ -42,7 +58,7 @@
         line-height: 1;
     }
 
-    &:hover:not(.social__link, #search),
+    &:hover:not(.social__link, #search, .language),
     &.active {
         background-color: $white;
         color: $black;
@@ -211,68 +227,49 @@
 }  
 
 // Language dropbox
-.sl-nav {
+
+.language {
+    position: relative;
     display: flex;
+    align-items:center;
     justify-content: center;
-    padding: 1rem;
-    align-items: center;
-    width: 7rem;
-    text-align: center;
-    margin: 0;
+    margin: .5rem;
+    padding: .5rem;
     color: $white;
-    z-index: 100000;
-    
 
     & img {
-        padding: 0 .5rem .8rem 0;
+        margin-right: .3em;
     }
 
-    & ul {
-        margin:0;
-        padding:0;
-        top: -.3rem;
-        list-style: none;
-        position: relative;
-        display: inline-block;
-    }
 
-    &:hover ul li ul {
-        position: absolute;
-        top: 2.9rem;
-        left: -6rem;
+    &:hover{
+        .dropdown-language {
+            display: block;
+        }
+    }
+  }
+  
+  .dropdown-language {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: -1.5rem;
+    background: $white;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    z-index: 1000000;
+  
+    & a {
+        color: $black;
+        padding: 1.5rem;
+        text-decoration: none;
         display: block;
-        width: 13.5rem;
-        padding-top: 0;
-        z-index: 1;
-        border-radius: .5rem;
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    }
-
-    & li {
-        cursor: pointer;
         
-        ul {
-        display: none;
-        
-            li {
-                text-align: left;
-                background: $white;
-                padding: 1.5rem 1.5rem;
-                z-index: 2;
-                font-size: 1.5rem;
-                color: $black;
-
-                a {
-                    padding-left: .5rem;
-                
-                    &:hover,  &.active {
-                        color: $gray;
-                    }
-                }
-            }
+        &:hover {
+            color:$gray;
         }
     }
 }
+  .show {display: block;}
 
 
 //Telegram button

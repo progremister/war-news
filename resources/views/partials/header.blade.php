@@ -12,64 +12,36 @@
             <a class="nav__link" href="{{ url('/') }}">Укриття</a>
             <a class="nav__link" href="{{ route('news') }}">Новини</a>
             
-            {{-- <a class="nav-link sl-nav" href="#">
+            <div class="nav__link language">
                 <img src="{{ asset("images/icons/globe.svg")}}" alt="">
-                <ul>
-                    <li><b>{{ App::getLocale() }}</b>
-                        <ul>
-                            <li><span class="active">Українська</span></li>
-                            <li><span>English</span></li>
-                        </ul>
-                    </li>
-                </ul>
-            </a> --}}
+                <a class="lang-drpdwn-btn">{{ App::getLocale() }}</a>
+                <div class="dropdown-language">
+                  <a href="/">Українська</a>
+                  <a href="/">English</a>
+                </div>
+              </div>
 
             <a class="nav__link social__link" href="">
                 <img src="{{ asset("images/icons/telegram-white.svg")}}" alt="">
             </a>
-            <a class="nav-link sl-nav" href="{{ route('login') }}">
             @if(Auth::check())
-                <ul>
-                    <li ><b style="text-transform: none">{{ Auth::user()->username}}</b>
-                        <ul>
-                            <li><i class="sl-flag flag-ua">
-                                    <div id="edit_profile"></div>
-                                </i> <span class="active"> Профіль</span></li>
-                            <li><i class="sl-flag flag-rus">
-                                    <div id="logout"></div>
-                                </i><span class="" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                {{ __('Вийти') }}
-                                </span></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="nav__link language">
+                    <a class="lang-drpdwn-btn">{{ Auth::user()->username }}</a>
+                    <div class="dropdown-language">
+                      <a href="/">Профіль</a>
+                      <a сlass="" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                        {{ __('Вийти') }}</a>
+                    </div>
+                  </div>
             </a>
-
-                {{-- <ul class="profile-wrapper">
-                    <li>
-                        <div class="profile">
-                            <img src="http://gravatar.com/avatar/0e1e4e5e5c11835d34c0888921e78fd4?s=80" />
-                            <a href="http://swimbi.com" class="name">{{ Auth::user()->username }}</a>
-                            
-                            <ul class="menu">
-                                <li><a href="#">Edit</a></li>
-                                <li><a href="#">Change Password</a></li>
-                                <li><a class="" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                                </a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>  --}}
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none">
                 @csrf
             </form>
             @else
+            <a class="nav__link" href="{{ route('login') }}">
             Увійти 
             </a>
             @endif
