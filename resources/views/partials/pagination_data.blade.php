@@ -15,5 +15,5 @@
     </div>
     {!! $posts -> withQueryString() -> links('vendor.pagination.custom-pagination') !!}
     @else
-        <h2>Нічого не знайдено!</h2>
+        <h2>@lang('main.nothing_found')</h2>
     @endif

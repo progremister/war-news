@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    @lang('main.sign_in')
+@endsection
+
 @section('content')
 <div class="container flex">
     {{-- <div class="row justify-content-center">
@@ -75,7 +79,7 @@
             <div class="tooltip">Click Me</div>
           </div> --}}
         <div class="form">
-          <h2>{{ __('Вхід') }}</h2>
+          <h2> @lang('main.login_title')</h2>
           <form method="POST" action="{{ route('login') }}">
             @csrf
             <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">    
@@ -84,16 +88,16 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror       
-            <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Пароль">
+            <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="@lang('main.password_placeholder')">
             @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <button type="submit">{{ __('Увійти') }}</button>
+            <button type="submit">{{ __('main.sign_in') }}</button>
           </form>
         </div>
-        <div class="cta"><a href="{{ route('password.request') }}">Забули пароль?</a></div>
+        <div class="cta"><a href="{{ route('password.request') }}">@lang('main.forgot_password')</a></div>
       </div>
 </div>
 @endsection

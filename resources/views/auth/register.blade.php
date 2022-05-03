@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    @lang('main.sign_up')
+@endsection
+
 @section('content')
 <div class="container flex">
     {{-- <div class="row justify-content-center">
@@ -75,10 +79,10 @@
     </div> --}}
     <div class="module form-module">
         <div class="form">
-          <h2>{{ __('Реєстрація') }}</h2>
+          <h2>{{ __('main.sign_up') }}</h2>
           <form method="POST" action="{{ route('register') }}">
             @csrf
-            <input id="username" class="@error('name') is-invalid @enderror" type="text" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Ім'я користувача">
+            <input id="username" class="@error('name') is-invalid @enderror" type="text" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="@lang('main.username_placeholder')">
             @error('username')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -90,14 +94,14 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <input id="password" class="@error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="Пароль">
+            <input id="password" class="@error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="@lang('main.password_placeholder')">
             @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
-            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Підтвердити пароль">
-            <button type="submit">{{ __('Зареєструватися') }}</button>
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="@lang('main.confirm_placeholder')">
+            <button type="submit">{{ __('main.sign_up') }}</button>
           </form>
         </div>
       </div>

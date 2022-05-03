@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Стаття
+    @lang('main.post_title')
 @endsection
 
 @section('news-content')
@@ -19,7 +19,7 @@
                     @endif
                     {!! $post->content !!}
                 </div>
-                <a href="/news" class="charity__btn btn--black" style="margin: 0 auto 1rem">Back</a>
+                <a href="/news" class="charity__btn btn--black" style="margin: 0 auto 1rem">@lang('main.back')</a>
             </div>
         </div>
     <!-- end post -->

@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Новини
+    @lang('main.news_title')
 @endsection
 
 @section('news-content')
@@ -20,7 +20,7 @@
 
         <div class="box news">
             <ul class="homelist">
-            <h1 class="title">Новини</h1>
+            <h1 class="title">@lang('main.news_title')</h1>
                 @include('partials.pagination_data')
             </ul>
         </div>

@@ -13,11 +13,11 @@
                 <div class="form-header-group  header-large">
                     <div class="header-text httal htvam">
                     <h1 id="header_28" class="form-header">
-                        Благодійна Форма
+                        @lang('main.modal_title')
                     </h1>
                     <div class="anonimously">
                         <img src="{{ asset("images/charity/anonym.png") }}" alt="" height="60">
-                        <h2>Повністю анонімно</h2>
+                        <h2>@lang('main.anonim')</h2>
                     </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                 </li> -->
                 <li class="form-line jf-required" data-type="control_paypalcomplete" id="id_37">
                 <label class="form-label form-label-top" id="label_37" for="input_37">
-                    Сума
+                    @lang('main.donate_amount')
                     <span class="form-required">
                     *
                     </span>
@@ -87,12 +87,12 @@
                         </div>
                         </form>
                     </div>
-                    <label class="form-sub-label" for="input_37_donation" style="min-height: 13px;"> Введіть суму пожертви </label>
+                    <label class="form-sub-label" for="input_37_donation" style="min-height: 13px;"> @lang('main.enter_donate') </label>
                     </span>
                 </div>
                 </li>
                 <li class="form-line" id="id_38">
-                <label class="form-label form-label-top" id="label_38" for="input_38"> Методи оплати </label>
+                <label class="form-label form-label-top" id="label_38" for="input_38"> @lang('main.payment_methods') </label>
                 <div id="cid_38" class="form-input-wide">
                     <div class="payment-methods-area">
                     <div class="paypalcomplete-payment-wrapper">
@@ -103,13 +103,13 @@
                                 <div class="payment-method-container">
                                 <input type="radio" class="form-radio" name="payment-method" data-id="card-fields" id="card-fields-input" aria-describedby="label_38" />
                                 <label for="card-fields-input">
-                                    Debit або Credit Card
+                                    Debit @lang('main.or') Credit Card
                                 </label>
                                 </div>
                                 <div class="payment-method-container">
                                 <input type="radio" class="form-radio" name="payment-method" data-id="btc-fields" id="btc-fields-input" aria-describedby="label_39" />
                                 <label for="btc-fields-input">
-                                    BTC гаманець
+                                    BTC wallet
                                 </label>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@
 
                 <li class="form-line jf-required" data-type="control_textarea" id="id_33">
                 <label class="form-label form-label-top form-label-auto" id="label_33" for="input_33">
-                    Коментарі
+                    @lang('main.comment')
                     <span class="form-required">
                     *
                     </span>
@@ -205,7 +205,7 @@
                 <div id="cid_14" class="form-input-wide">
                     <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
                     <button id="input_14" type="submit" class="form-submit-button form-submit-button-simple_black submit-button jf-form-buttons jsTest-submitField">
-                        Підтвердити
+                        @lang('main.submit')
                     </button>
                     </div>
                 </div>

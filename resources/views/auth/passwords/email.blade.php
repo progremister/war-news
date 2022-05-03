@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    @lang('main.reset_title')
+@endsection
+
 @section('content')
 <div class="container flex">
     {{-- <div class="row justify-content-center">
@@ -45,7 +49,7 @@
     </div> --}}
     <div class="module form-module">
         <div class="form">
-          <h2>{{ __('Скинути пароль') }}</h2>
+          <h2>    @lang('main.reset_title')        </h2>
           @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -59,7 +63,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror          
-            <button type="submit">{{ __('Відправити посилання для скидання') }}</button>
+            <button type="submit">@lang('main.reset_submit')</button>
           </form>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Благодійність
+    @lang('main.charity_title')
 @endsection
 
 
@@ -22,7 +22,7 @@
                     <div class="charity__text">
                         <p>{!! $donate->content !!}</p>
                     </div>
-                    <div class="charity__btn btn--black" data-modal="#donate">Допомогти</div>
+                    <div class="charity__btn btn--black" data-modal="#donate">@lang('main.donate')</div>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel')  }} | @yield('title')</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -25,10 +25,10 @@
                 {{ config('app.name', 'Laravel') }}
             </a>
             <nav class="nav" id="nav">
-                <a class="nav__link" href="/register">Реєстрація</a>
-                <a class="nav__link" href="/login">Вхід</a>
+                <a class="nav__link" href="/register">@lang('main.sign_up')</a>
+                <a class="nav__link" href="/login">@lang('main.sign_in')</a>
                 
-                <a class="nav__link" href="/">Назад</a>
+                <a class="nav__link" href="/">@lang('main.back')</a>
 
             
                 <!-- Left Side Of Navbar -->

@@ -26,27 +26,28 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-Route::controller(HomeController::class)->group(function(){
-    Route::get('/adminka', 'index')->name("homeAdmin");
+Route::middleware(['set_locale'])->group(function(){
+
+    Auth::routes();
+
+
+    Route::controller(HomeController::class)->group(function(){
+        Route::get('/adminka', 'index')->name("homeAdmin");
+    });
+    Route::controller(MainController::class)->group(function () {
+        Route::get('/','index')->name('shelters');
+        Route::get('/charity', 'charity')->name('charity');
+        Route::get('/locale/{locale}', 'changeLocale') -> name('locale');
+    
+    });
+    
+    
+    Route::controller(NewsController::class)->group(function () {
+        Route::get('/news', 'renderPage')->name('news');
+        Route::get('/{url_key}', 'renderPost');
+    });
 });
-Route::controller(MainController::class)->group(function () {
-    Route::get('/','index')->name('shelters');
-    Route::get('/charity', 'charity')->name('charity');
-    Route::get('locale/{locale}', 'changeLocale') -> name('locale');
 
-});
-
-
-Route::controller(NewsController::class)->group(function () {
-    Route::get('/news', 'renderPage')->name('news');
-    Route::get('/{url_key}', 'renderPost');
-});
-
-
-Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//Route::get('/adminpanel', [HomeController::class, 'index'])->name('homeAdmin');
 Route::middleware('role:admin')->prefix('adminka')->group(function(){
     Route::get("/", [HomeController::class, 'index'])->name("homeAdmin");
 

@@ -27,7 +27,9 @@ class MainController extends Controller
     }
 
     public function changeLocale($locale){
-        $currentLocale = App::getLocale();
-        dd($currentLocale);
+
+        App::setLocale($locale);
+        session(['locale' => App::getLocale()]);
+        return redirect()->back();
     }
 }

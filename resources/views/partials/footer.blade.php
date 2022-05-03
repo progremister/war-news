@@ -13,9 +13,9 @@
         </div>
 
         <nav class="footer__nav">
-            <a class="footer__nav-link" href="{{ url('/') }}">Укриття</a>
-            <a class="footer__nav-link" href="{{ route('news') }}">Новини</a>
-            <a class="footer__nav-link  footer__nav-link--btn" href="{{ route('charity') }}">Допомогти</a>
+            <a class="footer__nav-link" href="{{ url('/') }}">@lang('main.shelters_title')</a>
+            <a class="footer__nav-link" href="{{ route('news') }}">@lang('main.news_title')</a>
+            <a class="footer__nav-link  footer__nav-link--btn" href="{{ route('charity') }}">@lang('main.charity_title')</a>
         </nav>
     </div>
 </footer>
