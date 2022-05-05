@@ -38,6 +38,10 @@
                       <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок статті" required>
                     </div>
                     <div class="form-group">
+                      <label for="exampleInputTitleEn">Заголовок (English)</label>
+                      <input type="text" class="form-control" id="exampleInputTitleEn" name="title_en" placeholder="Введіть заголовок статті (English)">
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputUrlKey">Url Ключ</label>
                       <input type="text" class="form-control" id="exampleInputUrlKey" name="url_key" placeholder="Введіть url ключ статті" required>
                     </div>
@@ -54,7 +58,16 @@
                       <input type="text" class="form-control" id="exampleInputDescription" name="description" placeholder="Введіть опис статті" required>
                     </div>
                     <div class="form-group">
-                      <textarea name="content" class="editor"></textarea>
+                      <label for="exampleInputDescriptionEn">Опис (English)</label>
+                      <input type="text" class="form-control" id="exampleInputDescriptionEn" name="description_en" placeholder="Введіть опис статті (English)">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputContent">Вміст статті</label>
+                      <textarea name="content" id="exampleInputContent" class="editor"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputContentEn">Вміст статті (English)</label>
+                      <textarea name="content_en" id="exampleInputContentEn" class="editor"></textarea>
                     </div>
                     <div class="form-group">
                       <img src="" alt="" class="img-uploaded" style="display: block; width: 30rem;">

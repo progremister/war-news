@@ -38,6 +38,13 @@
                       <label for="exampleInputTitle">Заголовок</label>
                       <input type="text" value="{{ $category->name }}" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок категорії" required>
                     </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputTitle">Заголовок (English)</label>
+                      <input type="text" value="{{ $category->name_en }}" class="form-control" id="exampleInputTitle" name="title_en" placeholder="Введіть заголовок категорії (english)">
+                    </div>
+                  </div>
                    
                   <!-- /.card-body -->
   

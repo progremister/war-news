@@ -17,10 +17,10 @@
             </div>
 
             <div class="charity__content">
-                <div class="charity__title">{{ $donate->title }}</div>
+                <div class="charity__title">{{ $donate->__('title') }}</div>
                     <div class="charity__content--inner">
                     <div class="charity__text">
-                        <p>{!! $donate->content !!}</p>
+                        <p>{!! $donate->__('content') !!}</p>
                     </div>
                     <div class="charity__btn btn--black" data-modal="#donate">@lang('main.donate')</div>
                 </div>

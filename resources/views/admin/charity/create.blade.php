@@ -38,7 +38,16 @@
                       <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок потреби" required>
                     </div>
                     <div class="form-group">
-                      <textarea name="content" class="editor"></textarea>
+                      <label for="exampleInputTitle">Заголовок (English)</label>
+                      <input type="text" class="form-control" id="exampleInputTitle" name="title_en" placeholder="Введіть заголовок потреби (english)">
+                    </div>
+                    <div class="form-group">
+                      <label for="charityContent">Вміст</label>
+                      <textarea name="content" id="charityContent" class="editor"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="charityContentEn">Вміст (English)</label>
+                      <textarea name="content_en" id="charityContentEn" class="editor"></textarea>
                     </div>
                     <div class="form-group">
                       <img src="" alt="" class="img-uploaded" style="display: block; width: 30rem;">

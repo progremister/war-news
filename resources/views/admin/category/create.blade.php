@@ -37,6 +37,10 @@
                       <label for="exampleInputTitle">Заголовок</label>
                       <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок категорії" required>
                     </div>
+                    <div class="form-group">
+                      <label for="exampleInputTitle">Заголовок (English)</label>
+                      <input type="text" class="form-control" id="exampleInputTitle" name="title_en" placeholder="Введіть заголовок категорії (english)">
+                    </div>
                    
                   <!-- /.card-body -->
   

@@ -39,6 +39,10 @@
                       <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок статті" required value="{{ $post->title }}">
                     </div>
                     <div class="form-group">
+                      <label for="exampleInputTitleEn">Заголовок (English)</label>
+                      <input type="text" class="form-control" id="exampleInputTitleEn" name="title_en" placeholder="Введіть заголовок статті (English)" value="{{ $post->title_en }}">
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputUrlKey">Url Ключ</label>
                       <input type="text" class="form-control" id="exampleInputUrlKey" name="url_key" placeholder="Введіть url ключ статті" required value="{{ $post->url_key }}">
                     </div>
@@ -55,7 +59,16 @@
                       <input type="text" class="form-control" id="exampleInputDescription" name="description" placeholder="Введіть опис статті" required value="{{ $post->description }}">
                     </div>
                     <div class="form-group">
-                      <textarea name="content" class="editor">{{ $post->content }}</textarea>
+                      <label for="exampleInputDescriptionEn">Опис (English)</label>
+                      <input type="text" class="form-control" id="exampleInputDescriptionEn" name="description_en" placeholder="Введіть опис статті (English)"  value="{{ $post->description_en }}">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputContent">Вміст статті</label>
+                      <textarea name="content" id="exampleInputContent" class="editor">{{ $post->content }}</textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputContentEn">Вміст статті (English)</label>
+                      <textarea name="content_en" id="exampleInputContentEn" class="editor">{{ $post->content_en }}</textarea>
                     </div>
                     <div class="form-group">
                       <img src="{{ asset("$post->image_path") }}" alt="" class="img-uploaded" style="display: block; width: 30rem;">

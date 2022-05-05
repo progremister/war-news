@@ -50,6 +50,9 @@
                                   <a href="?key=title" name="title">Заголовок</a>
                               </th>
                               <th>
+                                <a href="?key=title_en" name="title">Заголовок (eng)</a>
+                            </th>
+                              <th>
                                   <a href="#"> </a>
                               </th>
                               <th>
@@ -72,6 +75,12 @@
                             <td>
                                   <a href="/{{ $post->url_key }}" style="color: black">
                                     {{ $post->title }}
+                                  </a>
+                                  <br>
+                            </td>
+                            <td>
+                                  <a href="/{{ $post->url_key }}" style="color: black">
+                                    {{ $post->title_en }}
                                   </a>
                                   <br>
                             </td>

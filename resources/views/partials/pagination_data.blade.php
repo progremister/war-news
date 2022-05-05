@@ -7,8 +7,8 @@
                         <img src="{{ asset("$post->image_path")  }}" alt="{{ $post->title}}" />
                     @endif
                 </a> 
-                <a href="/{{ $post->url_key }}" class="title">{{ $post->title}}</a>
-                <p>{{ $post->description}}</p>
+                <a href="/{{ $post->url_key }}" class="title">{{ $post->__('title')}}</a>
+                <p>{{ $post->__('description')}}</p>
                 <h2 class="post__date" >{{ $post->created_at}}</h2>
             </li>
         @endforeach

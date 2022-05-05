@@ -49,9 +49,12 @@ class PostController extends Controller
     {
         $post = new  Post();
         $post->title = $request->title;
+        $post->title_en = $request->title_en;
         $post->description = $request->description;
+        $post->description_en = $request->description_en;
         $post->image_path = $request->image_path;
         $post->content = $request->content;
+        $post->content_en = $request->content_en;
         $post->url_key = $request->url_key;
         $post->category_id = $request->category_id;
         $post->save();
@@ -97,9 +100,12 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $post->title = $request->title;
+        $post->title_en = $request->title_en;
         $post->description = $request->description;
+        $post->description_en = $request->description_en;
         $post->image_path = $request->image_path;
         $post->content = $request->content;
+        $post->content_en = $request->content_en;
         $post->url_key = $request->url_key;
         $post->category_id = $request->category_id;
         $post->save();

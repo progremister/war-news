@@ -43,8 +43,10 @@ class CharityController extends Controller
     {
         $charity = new  Charity();
         $charity->title = $request->title;
+        $charity->title_en = $request->title_en;
         $charity->image_path = $request->image_path;
         $charity->content = $request->content;
+        $charity->content_en = $request->content_en;
         $charity->save();
 
         return redirect()->back()->withSuccess('Charity item was successfully created!');
@@ -83,8 +85,10 @@ class CharityController extends Controller
     public function update(Request $request, Charity $charity)
     {
         $charity->title = $request->title;
+        $charity->title_en = $request->title_en;
         $charity->image_path = $request->image_path;
         $charity->content = $request->content;
+        $charity->content_en = $request->content_en;
         $charity->save();
 
         return redirect()->back()->withSuccess('Charity item was successfully updated!');    }

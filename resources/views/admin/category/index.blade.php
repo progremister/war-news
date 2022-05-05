@@ -28,7 +28,7 @@
     <div class="container-fluid">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Кфтегорії</h3>
+                  <h3 class="card-title">Категорії</h3>
         
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -50,6 +50,9 @@
                                   <a href="?key=name" name="name">Заголовок</a>
                               </th>
                               <th>
+                                <a href="?key=name_en" name="name">Заголовок (eng)</a>
+                              </th>
+                              <th>
                                 <a href="?key=created_at" name="created_at">Час створення</a>
                               </th>
                               <th style="width: 40%">
@@ -69,6 +72,12 @@
                                   </a>
                                   <br>
                               </td>
+                              <td>
+                                <a>
+                                  {{ $category->name_en }}
+                                </a>
+                                <br>
+                            </td>
                               <td>
                                 <a>
                                   {{ $category->created_at }}

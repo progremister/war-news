@@ -50,6 +50,9 @@
                                   <a href="?key=title" name="title">Заголовок</a>
                               </th>
                               <th>
+                                <a href="?key=title_en" name="title">Заголовок (eng)</a>
+                            </th>
+                              <th>
                                   <a href="#">Зображення</a>
                               </th>
                               <th>
@@ -72,6 +75,12 @@
                                   </a>
                                   <br>
                             </td>
+                            <td>
+                              <a href="" style="color: black">
+                                {{ $charity->title_en }}
+                              </a>
+                              <br>
+                        </td>
                             <td>
                                 <a href="">
                                     <img src="{{ asset("$charity->image_path") }}" alt="" style="width: 10rem">

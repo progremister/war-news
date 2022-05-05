@@ -40,7 +40,16 @@
                       <input type="text" class="form-control" id="exampleInputTitle" name="title" placeholder="Введіть заголовок потреби" required value="{{ $charity->title}}">
                     </div>
                     <div class="form-group">
-                      <textarea name="content" class="editor">{{$charity->content}}</textarea>
+                      <label for="exampleInputTitleEn">Заголовок (English)</label>
+                      <input type="text" class="form-control" id="exampleInputTitleEn" name="title_en" placeholder="Введіть заголовок потреби (English)" value="{{ $charity->title_en}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="postContent">Вміст</label>
+                      <textarea name="content" id="postContent" class="editor">{{$charity->content}}</textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="postContentEn">Вміст (English)</label>
+                      <textarea name="content_en" id="postContentEn" class="editor">{{$charity->content_en}}</textarea>
                     </div>
                     <div class="form-group">
                       <img src="{{ asset("$charity->image_path") }}" alt="" class="img-uploaded" style="display: block; width: 30rem;">

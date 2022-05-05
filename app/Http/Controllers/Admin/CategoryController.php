@@ -44,6 +44,7 @@ class CategoryController extends Controller
     {
         $new_category = new Category();
         $new_category->name = $request->title; 
+        $new_category->name_en = $request->title_en; 
         $new_category->save();
 
         return redirect()->back()->withSuccess('Category was successfully created!');
@@ -83,6 +84,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $category->name = $request->title;
+        $category->name_en = $request->title_en;
         $category->save();
         return redirect()->back()->withSuccess('Category was successfully updated!');
     }

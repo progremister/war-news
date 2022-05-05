@@ -2,7 +2,7 @@
         <div class="box">
             <h2>@lang('main.pages')</h2>
             <ul>
-                <li><a href="/">@lang('main.shelters_title'))</a></li>
+                <li><a href="/">@lang('main.shelters_title')</a></li>
                 <li><a href="{{ route('news') }}">@lang('main.news_title')</a></li>
                 <li><a href="{{ route('charity') }}">@lang('main.charity_title')</a></li>
             </ul>
@@ -14,7 +14,7 @@
             <ul name="category_id">
                 <li><a href="{{ route('news') }}">@lang('main.all')</a></li>
                 @foreach($categories as $category)
-                    <li><a href="/news?category_id={{ $category->id}}" value="{{$category->id}}">{{ $category->name }}</a></li>
+                    <li><a href="/news?category_id={{ $category->id}}" value="{{$category->id}}">{{ $category->__('name') }}</a></li>
                 @endforeach
             </ul>
         </div>
