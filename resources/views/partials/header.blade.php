@@ -21,7 +21,7 @@
                 </div>
               </div>
 
-            <a class="nav__link social__link" href="">
+            <a class="nav__link social__link" href="https://t.me/dm_kolos">
                 <img src="{{ asset("images/icons/telegram-white.svg")}}" alt="">
             </a>
             @if(Auth::check())

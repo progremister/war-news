@@ -6,7 +6,7 @@
             </div>
 
             <div class="footer__social">
-                <a href="" target="_blank">
+                <a href="https://t.me/dm_kolos" target="_blank">
                     <img src="{{ asset("images/icons/telegram-white.svg")}}" height="18" alt="">
                 </a>
             </div>
